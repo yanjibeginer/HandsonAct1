@@ -1,4 +1,4 @@
-﻿namespace HandsonAct1
+namespace HandsonAct1
 {
     partial class Form1
     {
@@ -35,15 +35,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtItemName = new System.Windows.Forms.TextBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtDiscount = new System.Windows.Forms.TextBox();
-            this.txtQuantity = new System.Windows.Forms.TextBox();
-            this.txtPayment = new System.Windows.Forms.TextBox();
-            this.btnCompute = new System.Windows.Forms.Button();
-            this.lblTotalAmount = new System.Windows.Forms.Label();
-            this.lblChange = new System.Windows.Forms.Label();
-            this.btnSubmit = new System.Windows.Forms.Button();
+            this.boxItem = new System.Windows.Forms.TextBox();
+            this.boxPrice = new System.Windows.Forms.TextBox();
+            this.boxDiscount = new System.Windows.Forms.TextBox();
+            this.boxQuantity = new System.Windows.Forms.TextBox();
+            this.boxPayment = new System.Windows.Forms.TextBox();
+            this.buttonCalculate = new System.Windows.Forms.Button();
+            this.labelTotal = new System.Windows.Forms.Label();
+            this.labelChange = new System.Windows.Forms.Label();
+            this.buttonPay = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -116,95 +116,95 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Discount(%)";
             // 
-            // txtItemName
+            // boxItem
             // 
-            this.txtItemName.Location = new System.Drawing.Point(64, 28);
-            this.txtItemName.Name = "txtItemName";
-            this.txtItemName.Size = new System.Drawing.Size(140, 20);
-            this.txtItemName.TabIndex = 7;
+            this.boxItem.Location = new System.Drawing.Point(64, 28);
+            this.boxItem.Name = "boxItem";
+            this.boxItem.Size = new System.Drawing.Size(140, 20);
+            this.boxItem.TabIndex = 7;
             // 
-            // txtPrice
+            // boxPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(104, 55);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(100, 20);
-            this.txtPrice.TabIndex = 8;
+            this.boxPrice.Location = new System.Drawing.Point(104, 55);
+            this.boxPrice.Name = "boxPrice";
+            this.boxPrice.Size = new System.Drawing.Size(100, 20);
+            this.boxPrice.TabIndex = 8;
             // 
-            // txtDiscount
+            // boxDiscount
             // 
-            this.txtDiscount.Location = new System.Drawing.Point(295, 28);
-            this.txtDiscount.Name = "txtDiscount";
-            this.txtDiscount.Size = new System.Drawing.Size(100, 20);
-            this.txtDiscount.TabIndex = 9;
+            this.boxDiscount.Location = new System.Drawing.Point(295, 28);
+            this.boxDiscount.Name = "boxDiscount";
+            this.boxDiscount.Size = new System.Drawing.Size(100, 20);
+            this.boxDiscount.TabIndex = 9;
             // 
-            // txtQuantity
+            // boxQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(342, 53);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(57, 20);
-            this.txtQuantity.TabIndex = 10;
+            this.boxQuantity.Location = new System.Drawing.Point(342, 53);
+            this.boxQuantity.Name = "boxQuantity";
+            this.boxQuantity.Size = new System.Drawing.Size(57, 20);
+            this.boxQuantity.TabIndex = 10;
             // 
-            // txtPayment
+            // boxPayment
             // 
-            this.txtPayment.Location = new System.Drawing.Point(192, 228);
-            this.txtPayment.Name = "txtPayment";
-            this.txtPayment.Size = new System.Drawing.Size(100, 20);
-            this.txtPayment.TabIndex = 11;
+            this.boxPayment.Location = new System.Drawing.Point(192, 228);
+            this.boxPayment.Name = "boxPayment";
+            this.boxPayment.Size = new System.Drawing.Size(100, 20);
+            this.boxPayment.TabIndex = 11;
             // 
-            // btnCompute
+            // buttonCalculate
             // 
-            this.btnCompute.Location = new System.Drawing.Point(211, 98);
-            this.btnCompute.Name = "btnCompute";
-            this.btnCompute.Size = new System.Drawing.Size(75, 23);
-            this.btnCompute.TabIndex = 12;
-            this.btnCompute.Text = "Compute";
-            this.btnCompute.UseVisualStyleBackColor = true;
-            this.btnCompute.Click += new System.EventHandler(this.btnCompute_Click);
+            this.buttonCalculate.Location = new System.Drawing.Point(211, 98);
+            this.buttonCalculate.Name = "buttonCalculate";
+            this.buttonCalculate.Size = new System.Drawing.Size(75, 23);
+            this.buttonCalculate.TabIndex = 12;
+            this.buttonCalculate.Text = "Compute";
+            this.buttonCalculate.UseVisualStyleBackColor = true;
+            this.buttonCalculate.Click += new System.EventHandler(this.btnCompute_Click);
             // 
-            // lblTotalAmount
+            // labelTotal
             // 
-            this.lblTotalAmount.AutoSize = true;
-            this.lblTotalAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalAmount.Location = new System.Drawing.Point(255, 184);
-            this.lblTotalAmount.Name = "lblTotalAmount";
-            this.lblTotalAmount.Size = new System.Drawing.Size(31, 16);
-            this.lblTotalAmount.TabIndex = 13;
-            this.lblTotalAmount.Text = "0.00";
+            this.labelTotal.AutoSize = true;
+            this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotal.Location = new System.Drawing.Point(255, 184);
+            this.labelTotal.Name = "labelTotal";
+            this.labelTotal.Size = new System.Drawing.Size(31, 16);
+            this.labelTotal.TabIndex = 13;
+            this.labelTotal.Text = "0.00";
             // 
-            // lblChange
+            // labelChange
             // 
-            this.lblChange.AutoSize = true;
-            this.lblChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChange.Location = new System.Drawing.Point(223, 267);
-            this.lblChange.Name = "lblChange";
-            this.lblChange.Size = new System.Drawing.Size(31, 16);
-            this.lblChange.TabIndex = 14;
-            this.lblChange.Text = "0.00";
+            this.labelChange.AutoSize = true;
+            this.labelChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelChange.Location = new System.Drawing.Point(223, 267);
+            this.labelChange.Name = "labelChange";
+            this.labelChange.Size = new System.Drawing.Size(31, 16);
+            this.labelChange.TabIndex = 14;
+            this.labelChange.Text = "0.00";
             // 
-            // btnSubmit
+            // buttonPay
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(300, 227);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
-            this.btnSubmit.TabIndex = 15;
-            this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = true;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            this.buttonPay.Location = new System.Drawing.Point(300, 227);
+            this.buttonPay.Name = "buttonPay";
+            this.buttonPay.Size = new System.Drawing.Size(75, 23);
+            this.buttonPay.TabIndex = 15;
+            this.buttonPay.Text = "Submit";
+            this.buttonPay.UseVisualStyleBackColor = true;
+            this.buttonPay.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(440, 361);
-            this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.lblChange);
-            this.Controls.Add(this.lblTotalAmount);
-            this.Controls.Add(this.btnCompute);
-            this.Controls.Add(this.txtPayment);
-            this.Controls.Add(this.txtQuantity);
-            this.Controls.Add(this.txtDiscount);
-            this.Controls.Add(this.txtPrice);
-            this.Controls.Add(this.txtItemName);
+            this.Controls.Add(this.buttonPay);
+            this.Controls.Add(this.labelChange);
+            this.Controls.Add(this.labelTotal);
+            this.Controls.Add(this.buttonCalculate);
+            this.Controls.Add(this.boxPayment);
+            this.Controls.Add(this.boxQuantity);
+            this.Controls.Add(this.boxDiscount);
+            this.Controls.Add(this.boxPrice);
+            this.Controls.Add(this.boxItem);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -228,15 +228,15 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtItemName;
-        private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.TextBox txtDiscount;
-        private System.Windows.Forms.TextBox txtQuantity;
-        private System.Windows.Forms.TextBox txtPayment;
-        private System.Windows.Forms.Button btnCompute;
-        private System.Windows.Forms.Label lblTotalAmount;
-        private System.Windows.Forms.Label lblChange;
-        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.TextBox boxItem;
+        private System.Windows.Forms.TextBox boxPrice;
+        private System.Windows.Forms.TextBox boxDiscount;
+        private System.Windows.Forms.TextBox boxQuantity;
+        private System.Windows.Forms.TextBox boxPayment;
+        private System.Windows.Forms.Button buttonCalculate;
+        private System.Windows.Forms.Label labelTotal;
+        private System.Windows.Forms.Label labelChange;
+        private System.Windows.Forms.Button buttonPay;
     }
 }
 
