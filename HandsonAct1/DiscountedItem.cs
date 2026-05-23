@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,17 +13,17 @@ namespace ItemNamespace
         private double payment_amount;
         private double change;
 
-        // Constructor invoking the base class constructor
+       
         public DiscountedItem(string name, double price, int quantity, double discount)
             : base(name, price, quantity)
         {
             this.item_discount = discount;
         }
 
-        // Overriding the abstract method to calculate the total price
+        // Overriding the abstract method 
         public override double getTotalPrice()
         {
-            // Formula provided: Convert discount to decimal, calculate discounted price, then total
+            // : Convert discount to decimal, calculate discounted price, then total
             double discountAmount = item_price * (item_discount * 0.01);
             discounted_price = item_price - discountAmount;
 
