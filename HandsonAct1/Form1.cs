@@ -21,19 +21,19 @@ namespace HandsonAct1
 
         private void btnCompute_Click(object sender, EventArgs e)
         {
-            // 2. ADD THIS LINE: The 'try' block must start here
+           
             try
             {
-                // Get the text from the textboxes and convert them to the right data types
+                // Get the text for all
                 string name = txtItemName.Text;
                 double price = Convert.ToDouble(txtPrice.Text);
                 double discount = Convert.ToDouble(txtDiscount.Text);
                 int quantity = Convert.ToInt32(txtQuantity.Text);
 
-                // Create the DiscountedItem object
+                // Create the Discounted object
                 itemToPurchase = new DiscountedItem(name, price, quantity, discount);
 
-                // Compute the total price and display it with 2 decimal places ("F2")
+                // Compute the total price and display
                 lblTotalAmount.Text = itemToPurchase.getTotalPrice().ToString("F2");
             }
             catch (FormatException)
@@ -45,10 +45,10 @@ namespace HandsonAct1
         {
             try
             {
-                // Make sure the user clicked Compute first
+                // Making sur the user clicked Compute first
                 if (itemToPurchase != null)
                 {
-                    // Get the payment amount
+                    // Get  payment amount
                     double payment = Convert.ToDouble(txtPayment.Text);
                     itemToPurchase.setPayment(payment);
 
