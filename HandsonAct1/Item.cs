@@ -8,7 +8,7 @@ namespace ItemNamespace
 {
     public abstract class Item
     {
-        // Protected fields accessible by derived classes
+        // Protected fields accessible 
         protected string item_name;
         protected double item_price;
         protected int item_quantity;
@@ -24,7 +24,7 @@ namespace ItemNamespace
             this.item_quantity = quantity;
         }
 
-        // Abstract methods to be overridden by the derived class
+        // Abstract methods to be overridden 
         public abstract double getTotalPrice();
         public abstract void setPayment(double amount);
     }
