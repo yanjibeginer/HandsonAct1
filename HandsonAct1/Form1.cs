@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,20 +21,20 @@ namespace HandsonAct1
 
         private void btnCompute_Click(object sender, EventArgs e)
         {
-           
+            // 2. ADD THIS LINE: The 'try' block must start here
             try
             {
-                // Get the text for all
-                string name = txtItemName.Text;
-                double price = Convert.ToDouble(txtPrice.Text);
-                double discount = Convert.ToDouble(txtDiscount.Text);
-                int quantity = Convert.ToInt32(txtQuantity.Text);
+                // Get the text from the textboxes and convert them to the right data types
+                string name = boxItem.Text;
+                double price = Convert.ToDouble(boxPrice.Text);
+                double discount = Convert.ToDouble(boxDiscount.Text);
+                int quantity = Convert.ToInt32(boxQuantity.Text);
 
-                // Create the Discounted object
+                // Create the DiscountedItem object
                 itemToPurchase = new DiscountedItem(name, price, quantity, discount);
 
-                // Compute the total price and display
-                lblTotalAmount.Text = itemToPurchase.getTotalPrice().ToString("F2");
+                // Compute the total price and display it with 2 decimal places ("F2")
+                labelTotal.Text = itemToPurchase.getTotalPrice().ToString("F2");
             }
             catch (FormatException)
             {
@@ -45,15 +45,15 @@ namespace HandsonAct1
         {
             try
             {
-                // Making sur the user clicked Compute first
+                // Make sure the user clicked Compute first
                 if (itemToPurchase != null)
                 {
-                    // Get  payment amount
-                    double payment = Convert.ToDouble(txtPayment.Text);
+                    // Get the payment amount
+                    double payment = Convert.ToDouble(boxPayment.Text);
                     itemToPurchase.setPayment(payment);
 
                     // Compute and display the change
-                    lblChange.Text = itemToPurchase.getChange().ToString("F2");
+                    labelChange.Text = itemToPurchase.getChange().ToString("F2");
                 }
                 else
                 {
